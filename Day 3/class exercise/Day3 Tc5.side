@@ -1,0 +1,70 @@
+{
+  "id": "077ca7cd-30d2-4342-ad65-a5486dd97cc6",
+  "version": "2.0",
+  "name": "Day3",
+  "url": "https://demo.opencart.com/index.php?route=checkout/voucher&language",
+  "tests": [{
+    "id": "0796a861-b8fb-495d-9de9-e3c6809e349a",
+    "name": "Tc5",
+    "commands": [{
+      "id": "751a265e-8581-415f-a73e-1b4819509273",
+      "comment": "",
+      "command": "open",
+      "target": "https://demo.opencart.com/index.php?route=checkout/voucher&language",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "18af3ed0-0c56-4ba7-8edf-2187b54a66aa",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1500x800",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "298223a5-c176-4ade-abf6-1544b593aa25",
+      "comment": "",
+      "command": "click",
+      "target": "id=content",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f13ff6ae-3828-4678-a59d-9ee731fea57e",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "id=input-amount",
+      "targets": [
+        ["id=input-amount", "id"],
+        ["name=amount", "name"],
+        ["css=#input-amount", "css:finder"],
+        ["xpath=//input[@id='input-amount']", "xpath:attributes"],
+        ["xpath=//form[@id='form-voucher']/div[7]/div/input", "xpath:idRelative"],
+        ["xpath=//div[7]/div/input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "babbf6f3-9f78-4abf-b66d-6ef2a1a5a416",
+      "comment": "",
+      "command": "click",
+      "target": "name=agree",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "53fd8496-9316-4c83-ac10-7b554bf5d5e7",
+      "comment": "",
+      "command": "verifyChecked",
+      "target": "name=agree",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "5c6e1aeb-fff9-4a11-a9e4-8abe63e2b671",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["0796a861-b8fb-495d-9de9-e3c6809e349a"]
+  }],
+  "urls": ["https://demo.opencart.com/index.php?route=checkout/voucher&language"],
+  "plugins": []
+}
